@@ -1,0 +1,13 @@
+1. create a fake data system (in txt first)
+	a) user table: unique user id, user name, # of win, # of total match
+	b) match table: match id, match time
+	c) match detail: match id, user id, state:win/lost
+
+2. create the txt file first, then use the shell pipline to create 
+three tables connect with the sqlite
+	- why use the python flask, since it is light weight and easy
+	to handles samll project in 3 days
+
+!!!!3. new staff - get the name and id to insert it into the user database
+
+4. study react JS with font-end and flask framework

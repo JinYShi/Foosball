@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block body_contents %}
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>Foosball in Terem</h1>
+                <a href="#search" class="btn btn-primary btn-lg">View the win rate</a>
+            </div>
+        </div>
+    </header>
+
+     <section id="search" class="content-search">
+        <div class="container">
+            <h2 class="section-header" style="text-align: center">View the win rate </h2>
+            <div class="row">
+                <div style="margin-top: 20px">
+                <form method="post" action="result">
+                    <div class="col-sm-12" style="text-align: center;">
+                       Please input either one player ID or both
+                    </div>
+                    <div class="col-sm-12" style="margin-bottom: 100px;">
+                        <div class="row">
+                            <div class="col-sm-5 team_options">
+                                <div>player1: </span><input name="player1" style="width: 450px; border-radius: 5px;" placeholder="type the ID eg.12345"></div>
+                            </div>
+                            <div class="col-sm-2 team_options" style="text-align: center">
+                                <h3>VS</h3>
+                            </div>
+                            <div class="col-sm-5 team_options">
+                                 <div>player2: </span><input name="player2" style="width: 450px; border-radius: 5px;" placeholder="type the ID eg.12345"></div>
+                            </div>
+                        </div>
+                    </div>
+                   <div class="col-sm-12" style="text-align: center">
+                        <input class="btn btn-primary" type="hidden" name="search" value="true">
+                        <input class="btn btn-primary" type="submit" value="Submit">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+            <a href="/search" class="btn btn-default btn-sm btn-back">Back to top</a>
+    </section>
+
+
+
+
+
+{% endblock %}

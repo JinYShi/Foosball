@@ -1,0 +1,83 @@
+
+
+     <section id="record" class="content-record">
+        <div class="container">
+            <h2 class="section-header" style="text-align: center">Record A Match</h2>
+            <div class="row">
+                <div style="margin-top: 20px">
+                <form method="post" action="/">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <span class="col-sm-6">
+                            <h3 style="text-align: center;">Team 1</h3>
+                            </span>
+                            <span class="col-sm-6">
+                                <h3 style="text-align: center;">Team 2</h3>
+                            </span>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 wincheckbox">
+                                Win <input  type="checkbox" name="team1win" value="1">
+                            </div>
+                            <div class="col-sm-6 wincheckbox">
+                                Win <input type="checkbox" name="team2win" value="1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-6 team_options">
+                                <select id="options1" class="form-control">
+                                    <option>number of players</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <br>
+                                <div id="content1-1" class="content1 hidden">player1: </span><input name="team1_player1" style="width: 87%" placeholder="  ID-Name eg. 3212-Mike"></div>
+                                <br>
+                                <div id="content1-2" class="content1 hidden">player2: </span><input name="team1_player2" style="width: 87%"></div>
+                                <br>
+                                <div id="content1-3" class="content1 hidden">player3: </span><input name="team1_player3" style="width: 87%"></div>
+                                <br>
+                                <div id="content1-4" class="content1 hidden">player4: </span><input name="team1_player4" style="width: 87%"></div>
+                                <br>
+                            </div>
+                            <div class="col-sm-6 team_options">
+                                <select id="options2" class="form-control">
+                                    <option>-number of players-</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <br>
+                                <div id="content2-1" class="content2 hidden">player1: <input name="team2_player1" style="width: 87%" placeholder="  ID-Name eg. 3212-Mike"></div>
+                                <br>
+                                <div id="content2-2" class="content2 hidden">player2: <input name="team2_player2" style="width: 87%"></div>
+                                <br>
+                                <div id="content2-3" class="content2 hidden">player3: <input name="team2_player3" style="width: 87%"></div>
+                                <br>
+                                <div id="content2-4" class="content2 hidden">player4: <input name="team2_player4" style="width: 87%"></div>
+                                <br>
+
+                            </div>
+                        </div>
+                    </div>
+                   <div class="col-sm-12" style="text-align: center">
+                        <input class="btn btn-primary" type="hidden" name="record" value="true">
+                        <input class="btn btn-primary" type="submit" value="Submit">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+            <a href="/" class="btn btn-default btn-sm btn-back">Back to top</a>
+    </section>
+
+
+
+
+
+

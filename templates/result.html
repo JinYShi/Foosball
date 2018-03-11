@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block body_contents %}
+    <section class="content content-2">
+        <div class="container">
+            {% if compare == False %}
+            <div class="col-sm-12" style="text-align: center">
+                <img style="height: 200px" src="../static/images/boy.svg">
+            </div>
+            <div class=" col-sm-12 " style="text-align: center;margin-top: 100px;">
+                <table class="table table-user-information">
+                    <tbody>
+                        <tr>
+                        <td><div style="text-align: center; color: yellowgreen;"><h3>Staff Name:</h3></div></td>
+                          <td><div style="text-align: center; color: yellowgreen;"><h3>{{ulist[0].player_name}}</h3></div></td>
+                        </tr>
+                        <tr>
+                          <td><div style="text-align: center; color: yellowgreen;"><h3>Win Rate:</h3></div></td>
+                          <td><div style="text-align: center; color: gold;"><h3>{%set proc_err = ulist[0].win_rate*100 %}({{'%0.2f' % proc_err|float}}%)</h3></div></td>
+                        </tr>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="/search" class="btn btn-primary">Back To Research</a>
+            </div>
+            {% elif compare == "No" %}
+                <a href="/search" class="btn btn-primary btn-lg">Back to search bar</a>
+            {% else %}
+                <div class="col-sm-5">
+                    <div class="sm-col-5" style="text-align: center;">
+                        <img style="height: 200px" src="../static/images/woman.svg">
+                    </div>
+                    <table class="table table-user-information">
+                        <tbody>
+                            <tr>
+                                <td><div style="text-align: center; color: yellowgreen;"><h3>Staff Name:</h3></div></td>
+                                <td><div style="text-align: center; color: yellowgreen;"><h3>{{ulist[0].player_name}}</h3></div></td>
+                            </tr>
+                            <tr>
+                                <td><div style="text-align: center; color: yellowgreen;"><h3>Win Rate:</h3></div></td>
+                                <td><div style="text-align: center; color: gold;"><h3>{%set proc_err = ulist[0].win_rate*100 %}({{'%0.2f' % proc_err|float}}%)</h3></div></td>
+                            </tr>
+                            </tr>
+
+                        </tbody>
+                      </table>
+                </div>
+                <div class="col-sm-2" style="text-align: center; margin-top: 100px;">
+                    <h2>VS</h2>
+                </div>
+                <div class="col-sm-5">
+                    <div class="sm-col-5" style="text-align: center;">
+                        <img style="height: 200px" src="../static/images/man.svg">
+                    </div>
+                    <table class="table table-user-information">
+                        <tbody>
+                            <tr>
+                                <td><div style="text-align: center; color: yellowgreen;"><h3>Staff Name:</h3></div></td>
+                                <td><div style="text-align: center; color: yellowgreen;"><h3>{{ulist[1].player_name}}</h3></div></td>
+                            </tr>
+                            <tr>
+                                <td><div style="text-align: center; color: yellowgreen;"><h3>Win Rate:</h3></div></td>
+                                <td><div style="text-align: center; color: gold;"><h3>{%set proc_err = ulist[1].win_rate*100 %}({{'%0.2f' % proc_err|float}}%)</h3></div></td>
+                            </tr>
+                            </tr>
+                        </tbody>
+                      </table>
+                </div>
+                <a href="/search" class="btn btn-primary">Back To Research</a>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}
